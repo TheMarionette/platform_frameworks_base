@@ -100,7 +100,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
 
             mHandler.post(() -> {
                 setDim(false);
-                setImageResource(R.drawable.fod_icon_default);
+                setImageResource(R.drawable.fingerprint_in_screen_default);
 
                 invalidate();
             });
@@ -203,7 +203,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
         mPaintFingerprint.setAntiAlias(true);
         mPaintFingerprint.setColor(res.getColor(R.color.config_fodColor));
 
-        setImageResource(R.drawable.fod_icon_default);
+        setImageResource(R.drawable.fingerprint_in_screen_default);
 
         mPaintShow.setAntiAlias(true);
         mPaintShow.setColor(res.getColor(R.color.config_fodColor));
@@ -286,7 +286,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_UP) {
             newInside = false;
             setDim(false);
-            setImageResource(R.drawable.fod_icon_default);
+            setImageResource(R.drawable.fingerprint_in_screen_default);
         }
 
         if (newInside == mIsInsideCircle) {
@@ -298,7 +298,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
         invalidate();
 
         if (!mIsInsideCircle) {
-            setImageResource(R.drawable.fod_icon_default);
+            setImageResource(R.drawable.fingerprint_in_screen_default);
             return false;
         }
 
@@ -360,7 +360,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
         mParams.gravity = Gravity.TOP | Gravity.LEFT;
 
-        setImageResource(R.drawable.fod_icon_default);
+        setImageResource(R.drawable.fingerprint_in_screen_default);
 
         mWindowManager.addView(this, mParams);
         mIsViewAdded = true;
