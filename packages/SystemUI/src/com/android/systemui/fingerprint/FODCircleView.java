@@ -198,7 +198,7 @@ public class FODCircleView extends ImageView implements OnTouchListener {
         public void onFingerprintError(int msgId, String errString) {
             super.onFingerprintError(msgId, errString);
             int mMsgId = msgId;
-            if ((viewAdded) && (mMsgId == 7)) {
+            if ((mIsViewAdded) && (mMsgId == 7)) {
                 hide();
             }
         }
